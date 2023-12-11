@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam and Project Information</title>
+    <style>
+        #projectDetails {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<div id="examDetails">
+    <h2>Final Exam Details</h2>
+    <p><strong>Class:</strong> CIT 215</p>
+    <p><strong>Usual Meeting Time:</strong> Wednesday, 10:30 am</p>
+    <p><strong>Final Exam Date/Time:</strong> Friday, December 15th, 10:30 am - 12:30 pm (Online via lockdown browser)</p>
+</div>
+
+<div id="projectDetails">
+    <h2>Final Project Summary</h2>
+    <p>This Friday, December 15th, from 10:30 am to 12:30 pm is when CIT 215 final exam will be given. The test will be administered online using a lockdown browser and will center on the use of jQuery and JavaScript to gauge your proficiency with these vital web development tools.</p>
+</div>
+
+<button id="toggleButton">Project Details</button>
+
+<script>
+    $(document).ready(function () {
+        $('#examDetails').fadeIn(1000);
+
+        $('#toggleButton').on('click', function () {
+            $('#projectDetails').slideToggle(1000);
+        });
+
+        $('#projectDetails').on('click', function () {
+            $(this).animate({ marginTop: '20px' }, 500).animate({ marginTop: '0px' }, 500);
+        });
+    });
+</script>
+
+</body>
+</html>
